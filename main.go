@@ -67,7 +67,7 @@ func chat(messages []message, apiKey string) string {
 }
 
 func main() {
-	apiKey := os.Getenv("API_KEY")
+	apiKey := os.Getenv("OPENAI_API_KEY")
 	if apiKey == "" {
 		log.Fatalln("API key must be defined as an environment variable.")
 	}
