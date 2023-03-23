@@ -79,7 +79,7 @@ func main() {
 	}
 
 	var messages []message
-	systemMsg := message{Role: "system", Content: "You are a specialist in thinking about git commit messages. Please generate a commit message based on the results of the git diff I'm about to send you."}
+	systemMsg := message{Role: "system", Content: "You are a specialist in thinking about git commit messages. Please generate a commit message based on the results of the git diff I'm about to send you. Please return only the commit message. Also, be sure to prefix the commit message with a prefix, e.g. feat: add text function."}
 	messages = append(messages, systemMsg)
 
 	diff := strings.TrimSpace(string(output))
